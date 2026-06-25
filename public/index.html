@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ARC x402 BTC and ETH market research dashboard">
+  <title>ARC Market Lens</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <div>
+        <strong>ARC Market Lens</strong>
+        <span>多源加密市场研究</span>
+      </div>
+    </div>
+    <div class="status-wrap">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span id="service-status">正在连接</span>
+      <button id="refresh-button" class="icon-button" type="button" title="刷新行情" aria-label="刷新行情">↻</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="market-heading">
+      <div>
+        <p class="eyebrow">ARC TESTNET · X402 RESEARCH</p>
+        <h1>BTC 与 ETH 市场观察</h1>
+        <p id="market-message" class="market-message">正在汇总多个市场的数据，请稍候。</p>
+      </div>
+      <div class="updated-block">
+        <span>报告更新时间</span>
+        <strong id="updated-at">--</strong>
+      </div>
+    </section>
+
+    <section id="asset-grid" class="asset-grid" aria-live="polite">
+      <article class="asset-card loading-card"><div class="loading-line wide"></div><div class="loading-line"></div></article>
+      <article class="asset-card loading-card"><div class="loading-line wide"></div><div class="loading-line"></div></article>
+    </section>
+
+    <section class="source-band">
+      <div>
+        <p class="section-label">数据共识</p>
+        <h2>独立来源交叉验证</h2>
+      </div>
+      <div id="source-list" class="source-list"></div>
+    </section>
+
+    <section class="access-band">
+      <div>
+        <p class="section-label">ARC X402</p>
+        <h2>完整研究报告</h2>
+        <p>包含信号依据、技术指标、支撑阻力与风险说明。</p>
+      </div>
+      <div class="purchase-block">
+        <div class="price-block">
+          <strong>0.1 USDC</strong>
+          <span>Circle Gateway · ARC Testnet</span>
+        </div>
+        <button id="purchase-button" class="purchase-button" type="button">存入并购买 · 0.1 USDC</button>
+        <p id="purchase-status" class="purchase-status" role="status"></p>
+      </div>
+    </section>
+
+    <section id="premium-report" class="premium-report" hidden>
+      <div class="premium-heading">
+        <div><p class="section-label">PAID RESEARCH</p><h2>完整分析</h2></div>
+        <span id="payment-reference" class="payment-reference"></span>
+      </div>
+      <div id="premium-content" class="premium-content"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>研究信息不构成投资建议</span>
+    <span id="report-id">Report --</span>
+  </footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>

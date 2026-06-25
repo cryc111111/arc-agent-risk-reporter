@@ -1,0 +1,26 @@
+{
+  "name": "arc-agent-boilerplate",
+  "version": "1.0.0",
+  "description": "ARC testnet autonomous x402 crypto market research buyer and seller agent",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "seller": "node server.js",
+    "buyer": "node agent.js",
+    "check": "node --check research.js && node --check server.js && node --check agent.js"
+  },
+  "dependencies": {
+    "@circle-fin/developer-controlled-wallets": "^10.6.0",
+    "@circle-fin/x402-batching": "^3.2.0",
+    "@x402/evm": "^2.16.0",
+    "dotenv": "^17.4.2",
+    "ethers": "^6.17.0",
+    "express": "^5.2.1",
+    "viem": "^2.53.1"
+  },
+  "overrides": {
+    "ws": "8.21.0"
+  },
+  "license": "ISC"
+}
