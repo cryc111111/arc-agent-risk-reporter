@@ -21,10 +21,12 @@ agent.js          # x402 buyer agent，自动购买付费报告
 research.js       # 行情数据采集和分析逻辑
 public/           # 前端页面
 package.json      # 项目脚本和依赖
+
 安装
 npm install
+
 环境变量
-请在服务器本地创建 .env 文件，不要上传到 GitHub。
+请在服务器本地创建 .env 文件，不要上传到 GitHub
 PORT=3000
 HOST=0.0.0.0
 RPC_URL=https://rpc.testnet.arc.network
@@ -42,13 +44,12 @@ CIRCLE_BUYER_WALLET_ID=your-circle-wallet-id
 CIRCLE_BUYER_ADDRESS=0xYourBuyerWalletAddress
 
 DEEPSEEK_API_KEY=your-deepseek-api-key
+
 运行
-启动服务端：
 npm run seller
-启动 buyer agent：
 npm run buyer
-检查语法：
 npm run check
+
 API
 GET /：前端页面
 GET /health：健康检查
@@ -56,11 +57,13 @@ GET /api/market/summary：公开行情摘要
 GET /api/gateway/balance?address=0x...：查询 Gateway 余额
 GET /api/premium/x402/market-analysis：x402 付费高级报告
 GET /api/status：管理员状态接口，需要 token
+
 安全提醒
 不要提交 .env
 不要公开 Circle API Key、Entity Secret、钱包私钥、GitHub Token
 如果密钥误传，立即删除公开内容并轮换密钥
 正式公开部署前，请设置强 ADMIN_STATUS_TOKEN
 测试钱包只放实验所需金额
+
 License
 ISC
